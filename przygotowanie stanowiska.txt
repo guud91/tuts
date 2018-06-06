@@ -1,0 +1,52 @@
+Jeżeli instalatory proponują dodanie ścieżki aplikacji do Path należy się zgodzić.
+
+Przygotowanie NodeJS:
+	1. Instalacja NVM i NodeJS https://github.com/coreybutler/nvm-windows/releases
+		Po zainstalowaniu należy:
+			Uruchomić CMD
+			nvm list available		lista dostępnych wersji noda, należy wybrać wersję do zainstalowania (np. 7.7.4)
+			nvm install 7.7.4
+			nvm use 7.7.4		
+			
+	2. Instalacja Git https://git-for-windows.github.io/
+
+	3. Instalacja VisualStudio http://www.microsoft.com/en-us/download/details.aspx?id=44914
+
+	4. Instalacja OpenSSL http://slproweb.com/download/Win32OpenSSL-1_0_2j.exe
+
+Po zainstalowaniu wszystkich aplikacji należy sprawdzić czy w zmiennych środowiskowych znajdują się następujące wpisy: 
+Path=
+	C:\Program Files\Git\cmd
+	C:\Program Files\Git\bin
+
+Następnie z cmd jako admin należy wykonać komendy
+	npm install -g npm@latest
+	gem install compass
+	npm install -g gulp-cli@1.2.2 gulpjs/gulp.git#4.0 gulp-typescript typescript typings tslint
+
+	npm config set msvs_version=2013
+	
+	npm set registry http://gsd-web-03:4873
+	npm adduser --registry http://gsd-web-03:4873
+
+windows		git config --global credential.helper wincred
+mac		git config --global credential.helper osxkeychain
+linux		git config --global credential.helper wincred
+
+	git config --global user.name username
+	git config --global user.email username@gsd.pl
+
+Instalacja Visual Studio Coda https://code.visualstudio.com/docs/?dv=win
+
+Instalacja pluginów do Visual Studio Coda
+W Visual Studio Coda komenda CTRL+p
+	ext install vscode-npm-script 
+	ext install typescript-hero 
+	ext install githistory 
+	ext install tslint 
+	ext install file-Icons
+	ext install vscode-tsconfig-glob
+  
+Zmiana paczki ikon
+OSX: Code > Preferences > File Icon Theme > File Icons
+Windows: Go to File > Preferences > File Icon Theme > File Icons
